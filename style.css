@@ -1,0 +1,167 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+
+
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    /* border: solid red; */
+}
+
+nav{
+    /* border: solid #0000ff; */
+    height: 8%;
+    display: flex;
+}
+
+nav .left{
+    /* border: solid gold; */
+    display: flex;
+    /* flex-grow: .4; */
+    justify-content: start;
+    align-items: center;
+    gap: 35px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+nav .left #bars{
+    height: 35px;
+    width: 35px;
+    display: flex;
+    font-size: 20px;
+    font-weight: 200;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .left #bars:hover{
+    border-radius: 50%;
+    background-color: rgba(202, 199, 199, 0.747);
+
+}
+
+nav .left img{
+    height: 60px;
+    width: 120px;
+}
+
+nav .left span{
+    position: relative;
+    bottom: 26px;
+}
+
+
+nav .middle{
+    /* border: solid gold; */
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+nav .middle input{
+    font-size: 15px;
+    height: 40px;
+    flex-grow: .8;
+    /* width: 600px; */
+    margin-left: 70px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border: solid .5px  gray;
+    cursor: pointer;
+}
+
+nav .middle #search{
+    width: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    right: 40px;
+}
+
+nav .middle #micro{
+    /* border: solid red; */
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #d3d0d08a;
+    cursor: pointer;
+}
+nav .middle #micro:hover{
+    background-color: #b8b5b5b9;
+}
+
+
+nav .right{
+    /* border: solid gold; */
+    flex-grow: .5;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: end;
+    padding-right: 30px;
+    /* padding-left: 50px; */
+    font-size: 22px;
+}
+
+nav .right div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid red; */
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+nav .right div:hover{
+    background-color: #b8b5b5b9;
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content{
+    border: solid red;
+    height: 92%;
+    display: flex;
+    flex-direction: row;
+}
+
+.content .left{
+    height: 100%;
+    border: solid green;
+    flex-grow: 1;
+}
+
+.content .right{
+    height: 100%;
+    border: solid green;
+    flex-grow: 5;
+
+}
