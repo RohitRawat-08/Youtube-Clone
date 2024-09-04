@@ -30,7 +30,7 @@ nav .left{
     padding: 10px 20px;
     cursor: pointer;
 }
-nav .left #bars{
+nav .left #toggleButton{
     height: 35px;
     width: 35px;
     display: flex;
@@ -40,7 +40,7 @@ nav .left #bars{
     align-items: center;
 }
 
-nav .left #bars:hover{
+nav .left #toggleButton:hover{
     border-radius: 50%;
     background-color: rgba(202, 199, 199, 0.747);
 
@@ -54,6 +54,8 @@ nav .left img{
 nav .left span{
     position: relative;
     bottom: 26px;
+    font-family: "Roboto", sans-serif;
+
 }
 
 
@@ -79,13 +81,19 @@ nav .middle input{
 }
 
 nav .middle #search{
-    width: 20px;
+    width: 50px;
     height: 40px;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     cursor: pointer;
-    right: 40px;
+    right: 50px;
+    /* border: solid red; */
+    border: solid .5px  gray;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #d3d0d08a;
 }
 
 nav .middle #micro{
@@ -127,12 +135,13 @@ nav .right div{
     cursor: pointer;
 }
 
-
 nav .right div:hover{
     background-color: #b8b5b5b9;
 }  
 
-
+nav .right div img{
+    height: 90%;
+}
 
 
 
@@ -162,7 +171,7 @@ nav .right div:hover{
 .content .left{
     height: 100%;
     /* border: solid green; */
-    flex-grow: .3;
+    /* flex-grow: .3; */
 }
 
 .content .left .home{
@@ -179,6 +188,7 @@ nav .right div:hover{
     justify-content: start;
     align-items: center;
     margin-left:5px ;
+    margin-right:5px ;
     border-radius: 12px;
     gap: 10px;
 }
@@ -190,18 +200,23 @@ nav .right div:hover{
 .content .left .home div img{
     height: 20px;
     /* width: 20px; */
-    padding-left: 10px;
+    margin-left: 10px;
+    /* border: solid red; */
 }
 
 
 .content .left .home div p{
-    padding-left: 10px;
+    margin-left: 10px;
     font-size: 14px;
     font-family: "Roboto", sans-serif;
+    /* border: solid red; */
 }
 
 
 
+.hidden_content{
+    display: none;
+}
 
 
 
