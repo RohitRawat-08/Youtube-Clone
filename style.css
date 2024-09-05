@@ -80,7 +80,7 @@ nav .middle input{
     cursor: pointer;
 }
 
-nav .middle #search{
+nav .middle #search_button{
     width: 50px;
     height: 40px;
     display: flex;
@@ -137,6 +137,7 @@ nav .right div{
 
 nav .right div:hover{
     background-color: #b8b5b5b9;
+    
 }  
 
 nav .right div img{
@@ -191,6 +192,8 @@ nav .right div img{
     margin-right:5px ;
     border-radius: 12px;
     gap: 10px;
+    cursor: pointer;
+
 }
 
 .content .left .home div:hover{
