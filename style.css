@@ -14,7 +14,7 @@
     /* border: solid red; */
 }
 
-nav{
+nav {
     /* border: solid #0000ff; */
     height: 8%;
     display: flex;
@@ -38,6 +38,11 @@ nav .left #toggleButton{
     font-weight: 200;
     justify-content: center;
     align-items: center;
+}
+
+nav .left #menu{
+    height: 25px;
+    width: 25px;
 }
 
 nav .left #toggleButton:hover{
@@ -139,9 +144,12 @@ nav .right div:hover{
     background-color: #b8b5b5b9;
     
 }  
+nav .right div #bell{
+    height: 60%;
+}
 
 nav .right div img{
-    height: 90%;
+    height: 80%;
 }
 
 
