@@ -67,7 +67,7 @@ let callYoutubeDataAPI = async query =>{
         key : api_key,
         part: "snippet",
         q:query,
-        maxResults :5,
+        maxResults :50,
         type :"video",
         regionCode:"IN",
     });
@@ -93,13 +93,54 @@ let getChannelIcon = async video_data => {
     let channelParam = new URLSearchParams({
         key: api_key,
         part : "snippet",
-        id :  video_data.snippet.channelID,
+        id :  video_data.snippet.channelId,
     });
 
     let res = await fetch(channel_http + channelParam);
     let data = await res.json();
     console.log(data);
+    
+    video_data.channelIconImage = data.items[0].snippet.thumbnails.default.url;
+
+    console.log(video_data);
+
+    appendVideoInToContainer(video_data);
 };
+
+
+let main_content = document.getElementById("main_content");
+main_content.innerHTML="";
+
+// To display viedos
+
+let appendVideoInToContainer = video_data =>{
+
+    let {snippet,channelIconImage,id:{videoId}} = video_data;
+    main_content.innerHTML += 
+    `
+    <a href="https://www.youtube.com/watch?v=${videoId}">
+        <main class="video_container">
+            <article class="imageBox">
+                <img src="${snippet.thumbnails.medium.url}" alt="">
+            </article>
+            <article class="infoBox">
+                <div>
+                    <img src="${channelIconImage}" alt="">
+                </div>
+                <div>
+                    <p>${snippet.title}</p>
+                    <p class=""ChannelName>${snippet.channelTitle}</p>
+                </div>
+            </article>
+        </main>
+    </a>
+    
+    `;
+
+}
+
+
+
 
 
 

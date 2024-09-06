@@ -5,7 +5,9 @@
     margin: 0;padding: 0;box-sizing: border-box;
 }
 
-
+body{
+    overflow-x:hidden;
+}
 
 
 .container{
@@ -240,13 +242,59 @@ nav .right div img{
 
 
 
-
-
-
-
 .content .right{
     height: 100%;
-    border: solid green;
+    /* border: solid green; */
     flex-grow: 5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
 
+}
+
+.content .right .video_container{
+    /* border: solid red; */
+    height: 300px;
+    width: 350px;
+}
+
+
+.videvideo_container .imageBox{
+    /* border: solid green; */
+    height: 80%;
+    width: 100%;
+}
+
+.video_container .imageBox img{
+    /* border :solid red;  */
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+.video_container .infoBox{
+    /* border :solid red; */
+    height: 15%;
+    display: flex;
+    gap: 20px;
+}
+
+.video_container .infoBox img{
+    /* border :solid blue; */
+    height: 100%;
+    border-radius: 50%;
+}
+
+.video_container .infoBox div .channelName{
+    color:aqua;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:any-link{
+    color: black;
 }
